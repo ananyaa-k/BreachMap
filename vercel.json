@@ -1,6 +1,6 @@
 {
-  "buildCommand": "npm install && npm run build",
-  "outputDirectory": "dist",
+  "buildCommand": "cd breachmap/frontend && npm install && npm run build",
+  "outputDirectory": "breachmap/frontend/dist",
   "framework": "vite",
   "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
