@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Share+Tech+Mono&family=Inter:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 216 52% 10%;
+    --foreground: 207 100% 92%;
+
+    --card: 214 52% 14%;
+    --card-foreground: 207 100% 92%;
+
+    --popover: 214 52% 14%;
+    --popover-foreground: 207 100% 92%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 216 52% 10%;
+
+    --secondary: 214 52% 14%;
+    --secondary-foreground: 207 100% 92%;
+
+    --muted: 214 52% 14%;
+    --muted-foreground: 207 100% 92%;
+
+    --accent: 199 92% 60%;
+    --accent-foreground: 216 52% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 62% 34%;
+    --input: 214 62% 34%;
+    --ring: 199 89% 48%;
+
+    --radius: 0.5rem;
+
+    --blueprint-line: 214 62% 34%;
+    --grid-line: 214 62% 34%;
+    --blueprint-dark: 214 52% 14%;
+    --electric: 199 89% 48%;
+    --bright: 199 92% 60%;
+    --text-muted-alpha: rgba(224, 240, 255, 0.45);
+    --grid-line-alpha: rgba(30, 77, 140, 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-mono-tech {
+    font-family: 'Share Tech Mono', monospace;
+  }
+
+  .blueprint-grid {
+    background-image:
+      linear-gradient(rgba(30, 77, 140, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30, 77, 140, 0.15) 1px, transparent 1px),
+      linear-gradient(rgba(30, 77, 140, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30, 77, 140, 0.06) 1px, transparent 1px);
+    background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+  }
+
+  .corner-marks {
+    position: relative;
+  }
+
+  .corner-marks::before,
+  .corner-marks::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+
+  .corner-marks::before {
+    top: 0;
+    left: 0;
+    border-top: 1px solid rgba(14, 165, 233, 0.6);
+    border-left: 1px solid rgba(14, 165, 233, 0.6);
+  }
+
+  .corner-marks::after {
+    top: 0;
+    right: 0;
+    border-top: 1px solid rgba(14, 165, 233, 0.6);
+    border-right: 1px solid rgba(14, 165, 233, 0.6);
+  }
+
+  .corner-marks-bottom {
+    position: relative;
+  }
+
+  .corner-marks-bottom::before,
+  .corner-marks-bottom::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+  }
+
+  .corner-marks-bottom::before {
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid rgba(14, 165, 233, 0.6);
+    border-left: 1px solid rgba(14, 165, 233, 0.6);
+  }
+
+  .corner-marks-bottom::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid rgba(14, 165, 233, 0.6);
+    border-right: 1px solid rgba(14, 165, 233, 0.6);
+  }
+}
